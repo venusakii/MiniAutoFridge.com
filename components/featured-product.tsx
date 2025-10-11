@@ -71,7 +71,7 @@ export function FeaturedProduct() {
                 size="lg"
                 className="bg-[#00C2FF] hover:bg-[#7DF9FF] text-white text-xl px-8 py-6 rounded-full transition-all duration-300 shadow-lg shadow-[#00C2FF]/50 hover:shadow-[#7DF9FF]/70 hover:scale-105 font-[family-name:var(--font-bebas)] tracking-wider"
               >
-                <Link href="/product">Learn More</Link>
+                <Link href="/reviews">Learn More</Link>
               </Button>
             </div>
           </div>
