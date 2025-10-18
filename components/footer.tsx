@@ -1,11 +1,17 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 
 export function Footer() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
-  const links = ["Privacy Policy", "Terms", "Contact", "About Us"]
+  const links = [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
+    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+  ]
 
   return (
     <footer className="relative bg-[#002D47] text-white py-12 px-4">
@@ -22,18 +28,18 @@ export function Footer() {
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-8 mb-8">
           {links.map((link) => (
-            <a
-              key={link}
-              href="#"
+            <Link
+              key={link.label}
+              href={link.href}
               className="text-white/70 hover:text-[#7DF9FF] transition-colors duration-300 relative"
-              onMouseEnter={() => setHoveredLink(link)}
+              onMouseEnter={() => setHoveredLink(link.label)}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              {link}
-              {hoveredLink === link && (
+              {link.label}
+              {hoveredLink === link.label && (
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#7DF9FF] animate-pulse" />
               )}
-            </a>
+            </Link>
           ))}
         </div>
 

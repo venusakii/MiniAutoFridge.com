@@ -3,10 +3,10 @@
 import { useState } from "react"
 
 const models = [
-  { name: "AstroAI", capacity: "12L", temp: "-20°C to +20°C", power: "45W", price: "$199" },
-  { name: "BougeRV", capacity: "15L", temp: "-18°C to +10°C", power: "50W", price: "$249" },
-  { name: "ICECO", capacity: "20L", temp: "-25°C to +20°C", power: "60W", price: "$299" },
-  { name: "Alpicool", capacity: "18L", temp: "-20°C to +20°C", power: "55W", price: "$279" },
+  { name: "AstroAI", capacity: "12L", temp: "-20°C to +20°C", power: "45W" },
+  { name: "BougeRV", capacity: "15L", temp: "-18°C to +10°C", power: "50W" },
+  { name: "ICECO", capacity: "20L", temp: "-25°C to +20°C", power: "60W" },
+  { name: "Alpicool", capacity: "18L", temp: "-20°C to +20°C", power: "55W" },
 ]
 
 export function ModelComparison() {
@@ -29,7 +29,6 @@ export function ModelComparison() {
                   Temperature
                 </th>
                 <th className="p-4 text-left font-[family-name:var(--font-bebas)] text-2xl tracking-wide">Power</th>
-                <th className="p-4 text-left font-[family-name:var(--font-bebas)] text-2xl tracking-wide">Price</th>
               </tr>
             </thead>
             <tbody>
